@@ -96,8 +96,8 @@ function Nav({addcart, handleRemove, totalPrice}) {
             <ol>
               {addcart.map((item, index) => {
                 return <>
-                <div className='cartlist'>
-                  <li key={index}>{item.headName}</li>
+                <div className='cartlist'  key={index}>
+                  <li>{item.headName}</li>
                   <div >${(item.discountedPrice)? item.discountedPrice : item.singlePrice}</div>
                   <button className='btn btn-danger btn-sm' onClick={() => {handleRemove(item)}}>X</button>
                 </div>
