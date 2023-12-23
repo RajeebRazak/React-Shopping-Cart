@@ -95,13 +95,13 @@ function Nav({addcart, handleRemove, totalPrice}) {
           ) : (
             <ol>
               {addcart.map((item, index) => {
-                return <>
+                return 
                 <div className='cartlist'  key={index}>
                   <li>{item.headName}</li>
                   <div >${(item.discountedPrice)? item.discountedPrice : item.singlePrice}</div>
                   <button className='btn btn-danger btn-sm' onClick={() => {handleRemove(item)}}>X</button>
                 </div>
-                </>
+                
                 })}
             </ol>
           )}
